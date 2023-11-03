@@ -2,8 +2,6 @@ package com.example.python.test;
 
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
-
 @RestController
 @RequestMapping(value = "/test")
 public class TestController {
@@ -14,7 +12,7 @@ public class TestController {
     }
 
     @GetMapping("/run")
-    public Long runPython() {
+    public String runPython() {
         return this.testService.runPython();
     }
 
