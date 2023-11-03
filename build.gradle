@@ -18,6 +18,9 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // https://mvnrepository.com/artifact/org.python/jython-slim
+    implementation group: 'org.python', name: 'jython-slim', version: '2.7.3'
 }
 
 tasks.named('test') {
