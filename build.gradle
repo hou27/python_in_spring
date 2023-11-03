@@ -21,6 +21,9 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.python/jython-slim
     implementation group: 'org.python', name: 'jython-slim', version: '2.7.3'
+
+    // https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
 }
 
 tasks.named('test') {
