@@ -1,5 +1,6 @@
 package com.example.python.test;
 
+import org.json.simple.JSONObject;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -11,9 +12,9 @@ public class TestController {
         this.testService = testService;
     }
 
-    @GetMapping("/run")
-    public String runPython() {
-        return this.testService.runPython();
+    @PostMapping("/run")
+    public String runPython(@RequestBody JSONObject data) {
+        return this.testService.runPython(data);
     }
 
 }
