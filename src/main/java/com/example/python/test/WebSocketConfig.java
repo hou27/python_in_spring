@@ -16,6 +16,6 @@ public class WebSocketConfig implements WebSocketConfigurer {
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(new WebSocketController(testService), "/ws");
+        registry.addHandler(new WebSocketController(testService), "/count_pushups");
     }
 }

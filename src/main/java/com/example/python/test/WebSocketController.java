@@ -15,11 +15,12 @@ public class WebSocketController extends TextWebSocketHandler {
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
         System.out.println("Connected ... " + session.getId());
         session.sendMessage(new TextMessage("Hello from Spring!"));
-        this.testService.websocket();
+//        this.testService.countPushup();
     }
 
     @Override
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
         System.out.println("Received message: " + message.getPayload());
+        this.testService.countPushup(message.getPayload());
     }
 }

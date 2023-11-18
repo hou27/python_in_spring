@@ -45,13 +45,13 @@ public class TestService {
 //        return pem.predict(filteredData).toString();
 //    }
 
-    public void websocket() {
+    public void countPushup(String payload) {
         StandardWebSocketClient client = new StandardWebSocketClient();
 
         try {
-            WebSocketSession session = client.execute(new MyHandler(), "ws://localhost:8000/testws").get();
+            WebSocketSession session = client.execute(new MyHandler(), "ws://localhost:8000/count_pushups").get();
 
-            TextMessage message = new TextMessage("From Spring");
+            TextMessage message = new TextMessage(payload);
             session.sendMessage(message);
 
             Thread.sleep(10000);
