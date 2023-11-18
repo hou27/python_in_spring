@@ -12,9 +12,9 @@ public class TestController {
         this.testService = testService;
     }
 
-    @PostMapping("/run")
-    public String runPython(@RequestBody JSONObject data) {
-        return this.testService.runPython(data);
-    }
+//    @PostMapping("/run")
+//    public String runPython(@RequestBody JSONObject data) {
+//        return this.testService.runPython(data);
+//    }
 
 }
